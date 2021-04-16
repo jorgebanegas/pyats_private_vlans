@@ -29,4 +29,10 @@ To launch script:
     ```console
     foo@bar(env):~$ python vlan.py
     ```
+    
+## Screenshot
+
+After running the script, you will see vlan 200 configured and the associates private vlans (210 and 211)
+
+![output.png](/STATIC/IMAGES/output.png)
 
