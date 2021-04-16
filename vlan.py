@@ -12,6 +12,8 @@ or implied.
 """
 
 # Create a testbed for the DevNet Always On NX-OS Sandbox
+from genie.libs.conf.interface import Interface
+from genie.libs.conf.vlan import Vlan
 from genie.testbed import load
 import config
 
@@ -39,14 +41,14 @@ device.connect(learn_hostname=True)
 device.configure("vtp mode transparent")
 
 # Create new vlan
-device.configure("vlan " + vlan)
+device.configure("vlan " + vlan + "\n name testing1")
 
 # Create new Vlan object
-device.configure("vlan 210 \n private-vlan isolated")
+device.configure("vlan 210 \n name testing2 \n private-vlan isolated \n no shutdown")
 
-device.configure("vlan 211 \n private-vlan community")
+device.configure("vlan 211 \n name testing3 \n private-vlan community \n no shutdown")
 
-device.configure("vlan " + vlan + "\n private-vlan association 210-211")
+device.configure("vlan " + vlan + "\n private-vlan association 210-211 \n no shutdown")
 
 # Build and send the configuration to devices
 output = device.build_config(apply=True)
