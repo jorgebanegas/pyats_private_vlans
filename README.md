@@ -34,5 +34,5 @@ To launch script:
 
 After running the script, you will see vlan 200 configured and the associates private vlans (210 and 211)
 
-![output.png](/STATIC/IMAGES/output.png)
+![output.png](output.png)
 
