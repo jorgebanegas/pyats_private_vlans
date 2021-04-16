@@ -12,8 +12,6 @@ or implied.
 """
 
 # Create a testbed for the DevNet Always On NX-OS Sandbox
-from genie.libs.conf.interface import Interface
-from genie.libs.conf.vlan import Vlan
 from genie.testbed import load
 import config
 
