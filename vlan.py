@@ -41,7 +41,7 @@ device.connect(learn_hostname=True)
 device.configure("vtp mode transparent")
 
 # Create new vlan
-device.configure("vlan " + vlan + "\n name testing1")
+device.configure("vlan " + vlan + "\n name testing1 \n private-vlan primary" )
 
 # Create new Vlan object
 device.configure("vlan 210 \n name testing2 \n private-vlan isolated \n no shutdown")
